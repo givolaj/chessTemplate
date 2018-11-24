@@ -26,7 +26,7 @@ var position = 'start';
 var init = function() {
 
 var board,
-  game = new Chess(position === 'start' ? '' : position),
+  game = new Chess(position === 'start' ? undefined : position),
   statusEl = $('#status');
 
 // do not pick up pieces if the game is over
