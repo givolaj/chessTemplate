@@ -26,9 +26,7 @@ var position = 'start';
 var init = function() {
 
 var board,
-  game = new Chess(position === 'start' ? undefined : position),
-  statusEl = $('#status');
-
+  game = new Chess(position === 'start' ? undefined : position);
 // do not pick up pieces if the game is over
 // only pick up pieces for the side to move
 var onDragStart = function(source, piece, position, orientation) {
