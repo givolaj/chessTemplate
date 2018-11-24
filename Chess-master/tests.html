@@ -26,10 +26,8 @@ var position = 'start';
 var init = function() {
 
 var board,
-  game = new Chess(),
+  game = new Chess(position === 'start' ? '' : position),
   statusEl = $('#status');
-  game.load('rnbqkbnr/ppp2ppp/3p4/4p3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3');
-
 
 // do not pick up pieces if the game is over
 // only pick up pieces for the side to move
@@ -109,8 +107,8 @@ updateStatus();
 }; // end init()
 $(document).ready(init);
 
-//position = 'rnbqkbnr/ppp2ppp/3p4/4p3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3';
-//init();
+position = 'rnbqkbnr/ppp2ppp/3p4/4p3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3';
+init();
 
 </script>
 </body>
